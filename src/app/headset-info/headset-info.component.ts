@@ -23,9 +23,9 @@ export class HeadsetInfoComponent implements OnInit, OnChanges {
   ngOnChanges() {
     if (this.controlResponses) {
       const cr = this.controlResponses;
-      this.headsetName = cr.map(response => response.hn).filter(Boolean);
-      this.firmwareVersion = cr.map(response => response.fw).filter(Boolean);
-      this.hardwareVersion = cr.map(response => response.hw).filter(Boolean);
+      // this.headsetName = cr.map(response => response.hn).filter(Boolean);
+      // this.firmwareVersion = cr.map(response => response.fw).filter(Boolean);
+      // this.hardwareVersion = cr.map(response => response.hw).filter(Boolean);
     }
   }
 }

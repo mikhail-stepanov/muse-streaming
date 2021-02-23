@@ -54,6 +54,7 @@ export class AppComponent implements OnInit, OnDestroy {
       await this.muse.start();
       this.data = zipSamples(this.muse.eegReadings)
         .takeUntil(this.destroy)
+        .filter(sample => !(isNaN(sample.data[0]) || isNaN(sample.data[3])))
         .do(() => this.cd.detectChanges())
         .share();
       this.batteryLevel = this.muse.telemetryData
